@@ -1,4 +1,4 @@
-shinyUI(dashboardPage(
+dashboardPage(
   skin = "blue",
   dashboardHeader(title = "ShinyTwit"),
   ## Sidebar content
@@ -137,5 +137,4 @@ shinyUI(dashboardPage(
       )
     )
   )
-)
 )

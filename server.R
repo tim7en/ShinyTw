@@ -1,4 +1,3 @@
-rm(list = ls())
 source("pcg.R")
 source("functions.R")
 
