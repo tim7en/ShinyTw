@@ -1,5 +1,5 @@
-x<-c("lhs","gridExtra","stringr","parallel","shiny","shinydashboard","DT","robustbase",
-     "data.table","htmlwidgets","parallel","lhs","ggplot2","rstudioapi","boot","dplyr","rhandsontable",
+x<-c("lhs","gridExtra","stringr","parallel","shiny","shinydashboard","DT",
+     "data.table","htmlwidgets","ggplot2","rstudioapi","boot","dplyr","rhandsontable",
      "RColorBrewer","wordcloud","tm","twitteR","ROAuth","plyr","stringr","base64enc",
      "NLP","syuzhet","SnowballC","stringi","topicmodels","wordcloud","ggplot2","tidyr","taskscheduleR","qdap",
      "rtweet","dplyr",'rtweet','shinydashboard',"tidytext","leaflet","rgdal","htmlwidgets",
