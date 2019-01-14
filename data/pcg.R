@@ -3,7 +3,7 @@ x<-c("lhs","gridExtra","stringr","parallel","shiny","shinydashboard","DT",
      "RColorBrewer","wordcloud","tm","twitteR","ROAuth","plyr","stringr","base64enc",
      "NLP","syuzhet","SnowballC","stringi","wordcloud","ggplot2","tidyr",
      "rtweet","dplyr",'rtweet','shinydashboard',"tidytext","leaflet","htmlwidgets",
-     "shinycssloaders","widyr","ggraph","igraph")
+     "shinycssloaders","widyr","igraph")
 
 lapply(x, FUN = function(X) {
   do.call("library", list(X)) 
