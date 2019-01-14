@@ -1,2 +1,3 @@
-# ShinyTw
-ShinyTwit deployment with AWS
+.Rproj.user
+.Rhistory
+.RData
