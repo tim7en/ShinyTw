@@ -1,7 +1,4 @@
-source("pcg.R")
-source("functions.R")
-
-server <- function(input, output, session) {
+function(input, output, session) {
   options(shiny.maxRequestSize = 70 * 1024^2) # Max csv data limit set to 60 mb
   
   # Page 1 view, maps

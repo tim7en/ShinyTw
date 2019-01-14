@@ -4,9 +4,9 @@ dashboardPage(
   ## Sidebar content
   dashboardSidebar(
     sidebarMenu(
-      menuItem("Trending", tabName = "dataInput", icon = icon("upload")),
-      menuItem("Search", tabName = "regressions", icon = icon("random")),
-      menuItem("Analytics", tabName = "mixmod", icon = icon("cubes"))
+      menuItem("Trending", tabName = "dataInput", icon = icon("upload"))#,
+      #menuItem("Search", tabName = "regressions", icon = icon("random")),
+      #menuItem("Analytics", tabName = "mixmod", icon = icon("cubes"))
     )
   ),
   dashboardBody( # Body content
@@ -80,60 +80,60 @@ dashboardPage(
             )
           )
         )
-      ),
-      tabItem( # First tab content
-        tabName = "regressions",
-        fluidRow(
-          column(
-            width = 3,
-            box(
-              title = "Twitter Input: ", status = "success", height =
-                "1595", width = "12", solidHeader = T,
-              textInput("trending", "Hashtag", "#Champion", width = 200),
-              numericInput("TweetsN", "Number of tweets", 5, min = 1, max = 10001, width = 200),
-              actionButton("looktrending", "Lookup") # updated from July 28
-            )
-          ),
-          column(
-            width = 9,
-            box(
-              title = "Twitter Input: ", status = "success", height =
-                "1595", width = "12", solidHeader = T,
-              tabsetPanel(
-                tabPanel(
-                  "Sentiment Plot",
-                  box(
-                    width = 12,
-                    column(12,
-                           align = "center",
-                           withSpinner(plotOutput("p1")), style = "height:800px;width:600;overflow-y: scroll;overflow-x: scroll;"
-                    )
-                  )
-                ),
-                tabPanel(
-                  "WordCloud",
-                  box(
-                    width = 12,
-                    column(12,
-                           align = "center",
-                           withSpinner(plotOutput("p2")), style = "height:800px;width:600;overflow-y: scroll;overflow-x: scroll;"
-                    )
-                  )
-                ),
-                tabPanel(
-                  "Word Frequency",
-                  box(
-                    width = 12,
-                    column(12,
-                           align = "center",
-                           withSpinner(plotOutput("p3")), style = "height:800px;width:600;overflow-y: scroll;overflow-x: scroll;"
-                    )
-                  )
-                )
-              )
-            )
-          )
-        )
+      # ),
+      # tabItem( # First tab content
+      #   tabName = "regressions",
+      #   fluidRow(
+      #     column(
+      #       width = 3,
+      #       box(
+      #         title = "Twitter Input: ", status = "success", height =
+      #           "1595", width = "12", solidHeader = T,
+      #         textInput("trending", "Hashtag", "#Champion", width = 200),
+      #         numericInput("TweetsN", "Number of tweets", 5, min = 1, max = 10001, width = 200),
+      #         actionButton("looktrending", "Lookup") # updated from July 28
+      #       )
+      #     ),
+      #     column(
+      #       width = 9,
+      #       box(
+      #         title = "Twitter Input: ", status = "success", height =
+      #           "1595", width = "12", solidHeader = T,
+      #         tabsetPanel(
+      #           tabPanel(
+      #             "Sentiment Plot",
+      #             box(
+      #               width = 12,
+      #               column(12,
+      #                      align = "center",
+      #                      withSpinner(plotOutput("p1")), style = "height:800px;width:600;overflow-y: scroll;overflow-x: scroll;"
+      #               )
+      #             )
+      #           ),
+      #           tabPanel(
+      #             "WordCloud",
+      #             box(
+      #               width = 12,
+      #               column(12,
+      #                      align = "center",
+      #                      withSpinner(plotOutput("p2")), style = "height:800px;width:600;overflow-y: scroll;overflow-x: scroll;"
+      #               )
+      #             )
+      #           ),
+      #           tabPanel(
+      #             "Word Frequency",
+      #             box(
+      #               width = 12,
+      #               column(12,
+      #                      align = "center",
+      #                      withSpinner(plotOutput("p3")), style = "height:800px;width:600;overflow-y: scroll;overflow-x: scroll;"
+      #               )
+      #             )
+      #           )
+        #       )
+        #     )
+        #   )
+        # )
       )
     )
   )
