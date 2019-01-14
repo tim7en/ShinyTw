@@ -1,4 +1,4 @@
-x<-c("lhs","gridExtra","stringr","parallel","shiny","shinydashboard","DT",
+x<-c("gridExtra","stringr","shiny","shinydashboard","DT",
      "data.table","htmlwidgets","ggplot2","rstudioapi","boot","dplyr","rhandsontable",
      "RColorBrewer","wordcloud","tm","twitteR","ROAuth","plyr","stringr","base64enc",
      "NLP","syuzhet","SnowballC","stringi","wordcloud","ggplot2","tidyr",
