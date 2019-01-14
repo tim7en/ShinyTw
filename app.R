@@ -353,7 +353,9 @@ ui <- fluidPage(
     )
   ),
 
-  sidebarPanel(
+  absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
+                draggable = TRUE, top = 60, left = "auto", right = 20, bottom = "auto",
+                width = "500", height = "auto",
     uiOutput("top"),
     tabsetPanel(
       tabPanel(
