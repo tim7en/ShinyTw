@@ -1,5 +1,63 @@
-source("data/functions.R")
-source("data/pcg.R")
+x<-c("lhs","gridExtra","stringr","parallel","shiny","shinydashboard","DT",
+     "data.table","htmlwidgets","ggplot2","rstudioapi","boot","dplyr","rhandsontable",
+     "RColorBrewer","wordcloud","tm","twitteR","ROAuth","plyr","stringr","base64enc",
+     "NLP","syuzhet","SnowballC","stringi","wordcloud","ggplot2","tidyr",
+     "rtweet","dplyr",'rtweet','shinydashboard',"tidytext","leaflet","htmlwidgets",
+     "shinycssloaders","widyr","igraph")
+
+lapply(x, FUN = function(X) {
+  do.call("library", list(X)) 
+})
+
+download.file(url="http://curl.haxx.se/ca/cacert.pem",destfile="cacert.pem")
+#Set constant requestURL
+requestURL <- "https://api.twitter.com/oauth/request_token"
+# Set constant accessURL
+accessURL <- "https://api.twitter.com/oauth/access_token"
+# Set constant authURL
+authURL <- "https://api.twitter.com/oauth/authorize"
+consumerKey <- "mQlBizLfUy4kAhX7KpL4tHLIR"
+consumerSecret <- "Panl7AQPfAKGp36S6priHnZnxSXXI07z33vL7X2SJV2V7cXYfZ"
+accessToken <- "889840922825019393-rDamD3WqBEwv9SNovddqYeZat5sXHlh"
+accessTokenSecret <- "adifAyNKgcT5lY5H1KsN2DkDzXfcvtnQtTARvtyNLYArU"
+
+options(httr_oauth_cache=T)
+
+
+setup_twitter_oauth(consumerKey,
+                    consumerSecret,
+                    accessToken,
+                    accessTokenSecret)
+
+
+twitter_tokens<- create_token(app = "ShinyTwit", consumer_key = consumerKey,
+                              consumer_secret = consumerSecret,
+                              accessToken,
+                              accessTokenSecret)
+options(warn = -1)
+
+
+cleanText <- function (x){
+  # extract text
+  x_text <- x$text
+  # convert all text to lower case
+  x_text <- tolower(x_text)
+  # Replace blank space ("rt")
+  x_text <- gsub("rt", "", x_text)
+  # Replace @UserName
+  x_text <- gsub("@\\w+", "", x_text)
+  # Remove punctuation
+  x_text <- gsub("[[:punct:]]", "", x_text)
+  # Remove links
+  x_text <- gsub("http\\w+", "", x_text)
+  # Remove tabs
+  x_text <- gsub("[ |\t]{2,}", "", x_text)
+  # Remove blank spaces at the beginning
+  x_text <- gsub("^ ", "", x_text)
+  # Remove blank spaces at the end
+  x_text <- gsub(" $", "", x_text)
+  return (x_text)
+}
 
 server <- function(input, output, session) {
   options(shiny.maxRequestSize = 70 * 1024^2) # Max csv data limit set to 60 mb
