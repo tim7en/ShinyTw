@@ -1,7 +1,7 @@
 x<-c("lhs","gridExtra","stringr","parallel","shiny","shinydashboard","DT",
      "data.table","htmlwidgets","ggplot2","rstudioapi","boot","dplyr","rhandsontable",
      "RColorBrewer","wordcloud","tm","twitteR","ROAuth","plyr","stringr","base64enc",
-     "NLP","syuzhet","SnowballC","stringi","wordcloud","ggplot2","tidyr","qdap",
+     "NLP","syuzhet","SnowballC","stringi","wordcloud","ggplot2","tidyr",
      "rtweet","dplyr",'rtweet','shinydashboard',"tidytext","leaflet","rgdal","htmlwidgets",
      "shinycssloaders","widyr","ggraph","igraph")
 
