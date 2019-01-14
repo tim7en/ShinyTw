@@ -29,5 +29,4 @@ download.file(url="http://curl.haxx.se/ca/cacert.pem",destfile="cacert.pem")
 #                               consumer_secret = consumerSecret,
 #                               accessToken,
 #                               accessTokenSecret)
-
 options(warn = -1)
