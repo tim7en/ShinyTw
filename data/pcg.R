@@ -1,9 +1,13 @@
-library ("easypackages")
-libraries ("lhs"," gridExtra","stringr","parallel"," factoextra"," shiny"," shinydashboard"," DT"," robustbase"," data.table"," htmlwidgets","
+
+X<-c("lhs"," gridExtra","stringr","parallel"," factoextra"," shiny"," shinydashboard"," DT"," robustbase"," data.table"," htmlwidgets","
   parallel"," lhs"," ggplot2"," rstudioapi"," boot"," dplyr"," rhandsontable","
   RColorBrewer","wordcloud","tm","twitteR","ROAuth","plyr","stringr","base64enc","
   NLP","syuzhet","SnowballC","stringi","topicmodels","wordcloud","ggplot2"," tidyr"," taskscheduleR","qdap","
   rtweet","dplyr","tidytext"," leaflet"," rgdal"," htmlwidgets"," shinycssloaders"," widyr"," ggraph"," igraph")
+
+lapply(x, FUN = function(X) {
+    do.call("require", list(X)) 
+})
 
 download.file(url="http://curl.haxx.se/ca/cacert.pem",destfile="cacert.pem")
 # Set constant requestURL
